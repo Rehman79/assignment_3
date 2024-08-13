@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../Models/Fruits.dart';
@@ -22,11 +21,23 @@ class Details_page extends StatelessWidget {
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 16),
-            Image.asset(fruit.imageUrl),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: Image.asset(
+                fruit.imageUrl,
+                fit: BoxFit.cover,
+                height: 200,
+                width: double.infinity,
+              ),
+            ),
             SizedBox(height: 16),
-            Text(
-              fruit.description,
-              style: TextStyle(fontSize: 18),
+            Expanded(
+              child: SingleChildScrollView(
+                child: Text(
+                  fruit.description,
+                  style: TextStyle(fontSize: 18),
+                ),
+              ),
             ),
           ],
         ),
