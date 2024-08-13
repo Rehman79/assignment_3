@@ -6,7 +6,7 @@ void main() {
   runApp(MaterialApp(
     title: 'Assigment 3',
     routes:{
-      '/homepage':(context)=>const Homepage(),
+      '/homepage':(context)=>Homepage(),
       '/details':(context)=>Details_page(),
     },
     initialRoute: '/homepage',
